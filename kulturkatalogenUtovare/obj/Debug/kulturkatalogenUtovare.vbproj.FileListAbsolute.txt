@@ -1,0 +1,13 @@
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogenUtovare\bin\Debug\kulturkatalogenUtovare.dll.config
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogenUtovare\bin\Debug\kulturkatalogenUtovare.dll
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogenUtovare\bin\Debug\kulturkatalogenUtovare.pdb
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogenUtovare\bin\Debug\kulturkatalogenUtovare.xml
+D:\devprojekt\api\kulturkatalogenAPI_v1\kulturkatalogenAPI_v1\bin\kulturkatalogenUtovare.dll.config
+D:\devprojekt\api\kulturkatalogenAPI_v1\kulturkatalogenAPI_v1\bin\kulturkatalogenUtovare.dll
+D:\devprojekt\api\kulturkatalogenAPI_v1\kulturkatalogenAPI_v1\bin\kulturkatalogenUtovare.pdb
+D:\devprojekt\api\kulturkatalogenAPI_v1\kulturkatalogenAPI_v1\bin\kulturkatalogenUtovare.xml
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogenUtovare\obj\Debug\kulturkatalogenUtovare.Resources.resources
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogenUtovare\obj\Debug\kulturkatalogenUtovare.vbproj.GenerateResource.Cache
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogenUtovare\obj\Debug\kulturkatalogenUtovare.dll
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogenUtovare\obj\Debug\kulturkatalogenUtovare.xml
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogenUtovare\obj\Debug\kulturkatalogenUtovare.pdb
