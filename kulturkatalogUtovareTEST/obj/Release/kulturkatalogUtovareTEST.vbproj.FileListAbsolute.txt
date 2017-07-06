@@ -1,0 +1,13 @@
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogUtovareTEST\bin\Release\kulturkatalogUtovareTEST.dll
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogUtovareTEST\bin\Release\kulturkatalogUtovareTEST.pdb
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogUtovareTEST\bin\Release\kulturkatalogUtovareTEST.xml
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogUtovareTEST\bin\Release\kulturkatalogenUtovare.dll
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogUtovareTEST\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogUtovareTEST\bin\Release\kulturkatalogenUtovare.pdb
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogUtovareTEST\bin\Release\kulturkatalogenUtovare.xml
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogUtovareTEST\obj\Release\kulturkatalogUtovareTEST.vbprojResolveAssemblyReference.cache
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogUtovareTEST\obj\Release\kulturkatalogUtovareTEST.Resources.resources
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogUtovareTEST\obj\Release\kulturkatalogUtovareTEST.vbproj.GenerateResource.Cache
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogUtovareTEST\obj\Release\kulturkatalogUtovareTEST.dll
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogUtovareTEST\obj\Release\kulturkatalogUtovareTEST.xml
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogUtovareTEST\obj\Release\kulturkatalogUtovareTEST.pdb

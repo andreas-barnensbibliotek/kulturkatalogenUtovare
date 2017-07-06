@@ -1,0 +1,10 @@
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogenUtovare\bin\Release\kulturkatalogenUtovare.dll.config
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogenUtovare\bin\Release\kulturkatalogenUtovare.dll
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogenUtovare\bin\Release\kulturkatalogenUtovare.pdb
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogenUtovare\bin\Release\kulturkatalogenUtovare.xml
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogenUtovare\obj\Release\kulturkatalogenUtovare.vbprojResolveAssemblyReference.cache
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogenUtovare\obj\Release\kulturkatalogenUtovare.Resources.resources
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogenUtovare\obj\Release\kulturkatalogenUtovare.vbproj.GenerateResource.Cache
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogenUtovare\obj\Release\kulturkatalogenUtovare.dll
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogenUtovare\obj\Release\kulturkatalogenUtovare.xml
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogenUtovare\obj\Release\kulturkatalogenUtovare.pdb

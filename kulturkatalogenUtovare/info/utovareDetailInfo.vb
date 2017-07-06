@@ -10,6 +10,7 @@
         _epost = ""
         _kommun = ""
         _weburl = ""
+        _bild = ""
     End Sub
 
     Private _utivarid As Integer
@@ -112,6 +113,15 @@
         End Get
         Set(ByVal value As String)
             _weburl = value
+        End Set
+    End Property
+    Private _bild As String
+    Public Property Bild() As String
+        Get
+            Return _bild
+        End Get
+        Set(ByVal value As String)
+            _bild = value
         End Set
     End Property
 

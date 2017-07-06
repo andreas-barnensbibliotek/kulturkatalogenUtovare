@@ -113,6 +113,8 @@ Partial Public Class kk_aj_tbl_Utovare
 	
 	Private _Ovrigt As String
 	
+	Private _Bild As String
+	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
     End Sub
@@ -167,6 +169,10 @@ Partial Public Class kk_aj_tbl_Utovare
     Partial Private Sub OnOvrigtChanging(value As String)
     End Sub
     Partial Private Sub OnOvrigtChanged()
+    End Sub
+    Partial Private Sub OnBildChanging(value As String)
+    End Sub
+    Partial Private Sub OnBildChanged()
     End Sub
     #End Region
 	
@@ -364,6 +370,22 @@ Partial Public Class kk_aj_tbl_Utovare
 				Me._Ovrigt = value
 				Me.SendPropertyChanged("Ovrigt")
 				Me.OnOvrigtChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Bild", DbType:="NVarChar(250)")>  _
+	Public Property Bild() As String
+		Get
+			Return Me._Bild
+		End Get
+		Set
+			If (String.Equals(Me._Bild, value) = false) Then
+				Me.OnBildChanging(value)
+				Me.SendPropertyChanging
+				Me._Bild = value
+				Me.SendPropertyChanged("Bild")
+				Me.OnBildChanged
 			End If
 		End Set
 	End Property
@@ -942,6 +964,8 @@ Partial Public Class kk_aj_proc_searchUtovareAllResult
 	
 	Private _Ovrigt As String
 	
+	Private _Bild As String
+	
 	Public Sub New()
 		MyBase.New
 	End Sub
@@ -1087,6 +1111,18 @@ Partial Public Class kk_aj_proc_searchUtovareAllResult
 		Set
 			If (String.Equals(Me._Ovrigt, value) = false) Then
 				Me._Ovrigt = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Bild", DbType:="NVarChar(250)")>  _
+	Public Property Bild() As String
+		Get
+			Return Me._Bild
+		End Get
+		Set
+			If (String.Equals(Me._Bild, value) = false) Then
+				Me._Bild = value
 			End If
 		End Set
 	End Property

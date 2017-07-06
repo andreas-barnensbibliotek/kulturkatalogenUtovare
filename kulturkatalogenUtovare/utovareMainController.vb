@@ -1,6 +1,10 @@
 ﻿Public Class utovareMainController
 
     Private _dalobj As New utovareDAL
+
+    Public Function getutovareAll() As List(Of utovareDetailInfo)
+        Return _dalobj.getAllUtovare()
+    End Function
     Public Function getutovarebyautocomplete(namn As String) As List(Of utovareDetailInfo)
         Return _dalobj.getUsername(namn)
     End Function
@@ -11,11 +15,13 @@
 
     Public Function addutovare(utovardata As utovareDetailInfo) As utovareDetailInfo
         Dim retobj As New utovareDetailInfo
+        If Not utovareExists(utovardata.Epost, utovardata.Ort) Then
 
-        Dim nyttutovarid = _dalobj.addutovareDetails(utovardata)
-        If nyttutovarid > 0 Then
-            retobj = _dalobj.getutovareDetails(nyttutovarid)
+            Dim nyttutovarid = _dalobj.addutovareDetails(utovardata)
+            If nyttutovarid > 0 Then
+                retobj = _dalobj.getutovareDetails(nyttutovarid)
 
+            End If
         End If
 
         Return retobj

@@ -11,3 +11,4 @@ D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogenUtovare\obj\Debug\
 D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogenUtovare\obj\Debug\kulturkatalogenUtovare.dll
 D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogenUtovare\obj\Debug\kulturkatalogenUtovare.xml
 D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogenUtovare\obj\Debug\kulturkatalogenUtovare.pdb
+D:\devprojekt\libraries\kulturkatalogenUtovare\kulturkatalogenUtovare\obj\Debug\kulturkatalogenUtovare.vbprojResolveAssemblyReference.cache

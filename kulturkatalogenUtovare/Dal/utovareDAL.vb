@@ -1,6 +1,6 @@
 ﻿Public Class utovareDAL
-    Private _connectionString As String = "Data Source=.\SQLEXPRESS;Initial Catalog=dnndev_v902.me;Persist Security Info=True;User ID=dnndev_v902.me;Password=L0rda1f"
-    'Private _connectionString As String = "Data Source=DE-1896;Initial Catalog=kulturkatalogenDB;User ID=kulturkatalogenDB;Password=L0rda1f"
+    'Private _connectionString As String = "Data Source=.\SQLEXPRESS;Initial Catalog=dnndev_v902.me;Persist Security Info=True;User ID=dnndev_v902.me;Password=L0rda1f"
+    Private _connectionString As String = "Data Source=DE-1896;Initial Catalog=kulturkatalogenDB;User ID=kulturkatalogenDB;Password=L0rda1f"
     Private _linqObj As New utovareLinqDataContext(_connectionString)
 
 
@@ -25,6 +25,7 @@
             tmp.Telefon = itm.Telefonnummer
             tmp.UtovarID = itm.UtovarID
             tmp.Weburl = itm.Hemsida
+            tmp.Bild = itm.Bild
 
             ret.Add(tmp)
         Next
@@ -50,7 +51,7 @@
         ret.Telefon = itm.Telefonnummer
         ret.UtovarID = itm.UtovarID
         ret.Weburl = itm.Hemsida
-
+        ret.Bild = itm.Bild
         Return ret
     End Function
 
@@ -61,21 +62,49 @@
                   Select e
 
         For Each itm In usr
-                Dim tmp As New utovareDetailInfo
-                tmp.Adress = itm.Adress
-                tmp.Efternamn = itm.Efternamn
-                tmp.Epost = itm.Epost
-                tmp.Fornamn = itm.Fornamn
-                tmp.Kommun = itm.Kommun
-                tmp.Organisation = itm.Organisation
-                tmp.Ort = itm.Ort
-                tmp.Postnr = itm.Postnr
-                tmp.Telefon = itm.Telefonnummer
-                tmp.UtovarID = itm.UtovarID
-                tmp.Weburl = itm.Hemsida
+            Dim tmp As New utovareDetailInfo
+            tmp.Adress = itm.Adress
+            tmp.Efternamn = itm.Efternamn
+            tmp.Epost = itm.Epost
+            tmp.Fornamn = itm.Fornamn
+            tmp.Kommun = itm.Kommun
+            tmp.Organisation = itm.Organisation
+            tmp.Ort = itm.Ort
+            tmp.Postnr = itm.Postnr
+            tmp.Telefon = itm.Telefonnummer
+            tmp.UtovarID = itm.UtovarID
+            tmp.Weburl = itm.Hemsida
+            tmp.Bild = itm.Bild
 
-                ret.Add(tmp)
-            Next
+            ret.Add(tmp)
+        Next
+
+
+        Return ret
+    End Function
+    Public Function getAllUtovare() As List(Of utovareDetailInfo)
+        Dim ret As New List(Of utovareDetailInfo)
+
+        Dim usr = From e In _linqObj.kk_aj_tbl_Utovares
+                  Select e
+
+        For Each itm In usr
+            Dim tmp As New utovareDetailInfo
+            tmp.Adress = itm.Adress
+            tmp.Efternamn = itm.Efternamn
+            tmp.Epost = itm.Epost
+            tmp.Fornamn = itm.Fornamn
+            tmp.Kommun = itm.Kommun
+            tmp.Organisation = itm.Organisation
+            tmp.Ort = itm.Ort
+            tmp.Postnr = itm.Postnr
+            tmp.Telefon = itm.Telefonnummer
+            tmp.UtovarID = itm.UtovarID
+            tmp.Weburl = itm.Hemsida
+            tmp.Bild = itm.Bild
+
+            ret.Add(tmp)
+        Next
 
 
         Return ret
@@ -109,6 +138,7 @@
             newitm.Postnr = utovareDetails.Postnr
             newitm.Telefonnummer = utovareDetails.Telefon
             newitm.Hemsida = utovareDetails.Weburl
+            newitm.Bild = utovareDetails.Bild
 
             _linqObj.kk_aj_tbl_Utovares.InsertOnSubmit(newitm)
             _linqObj.SubmitChanges()
@@ -140,9 +170,11 @@
                 itm.Postnr = utovareDetails.Postnr
                 itm.Telefonnummer = utovareDetails.Telefon
                 itm.Hemsida = utovareDetails.Weburl
+                itm.Bild = utovareDetails.Bild
             Next
 
             _linqObj.SubmitChanges()
+            ret = True
 
         Catch ex As Exception
             ret = False

@@ -14,6 +14,7 @@
       <Column Name="Kommun" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
       <Column Name="Hemsida" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
       <Column Name="Ovrigt" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Bild" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
     </Type>
   </Table>
   <Function Name="dbo.kk_aj_proc_GetArrBy_Utovare" Method="kk_aj_proc_GetArrBy_Utovare">
@@ -73,6 +74,7 @@
       <Column Name="Kommun" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
       <Column Name="Hemsida" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
       <Column Name="Ovrigt" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Bild" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>
