@@ -1,6 +1,6 @@
 ﻿Public Class utovareDAL
-    'Private _connectionString As String = "Data Source=.\SQLEXPRESS;Initial Catalog=dnndev_v902.me;Persist Security Info=True;User ID=dnndev_v902.me;Password=L0rda1f"
-    Private _connectionString As String = "Data Source=DE-1896;Initial Catalog=kulturkatalogenDB;User ID=kulturkatalogenDB;Password=L0rda1f"
+    Private _connectionString As String = "Data Source=.\SQLEXPRESS;Initial Catalog=dnndev_v902.me;Persist Security Info=True;User ID=dnndev_v902.me;Password=L0rda1f"
+    'Private _connectionString As String = "Data Source=DE-1896;Initial Catalog=kulturkatalogenDB;User ID=kulturkatalogenDB;Password=L0rda1f"
     Private _linqObj As New utovareLinqDataContext(_connectionString)
 
 
@@ -26,6 +26,7 @@
             tmp.UtovarID = itm.UtovarID
             tmp.Weburl = itm.Hemsida
             tmp.Bild = itm.Bild
+            tmp.Beskrivning = itm.Ovrigt
 
             ret.Add(tmp)
         Next
@@ -52,6 +53,7 @@
         ret.UtovarID = itm.UtovarID
         ret.Weburl = itm.Hemsida
         ret.Bild = itm.Bild
+        ret.Beskrivning = itm.Ovrigt
         Return ret
     End Function
 
@@ -75,6 +77,7 @@
             tmp.UtovarID = itm.UtovarID
             tmp.Weburl = itm.Hemsida
             tmp.Bild = itm.Bild
+            tmp.Beskrivning = itm.Ovrigt
 
             ret.Add(tmp)
         Next
@@ -102,6 +105,7 @@
             tmp.UtovarID = itm.UtovarID
             tmp.Weburl = itm.Hemsida
             tmp.Bild = itm.Bild
+            tmp.Beskrivning = itm.Ovrigt
 
             ret.Add(tmp)
         Next
@@ -139,6 +143,7 @@
             newitm.Telefonnummer = utovareDetails.Telefon
             newitm.Hemsida = utovareDetails.Weburl
             newitm.Bild = utovareDetails.Bild
+            newitm.Ovrigt = utovareDetails.Beskrivning
 
             _linqObj.kk_aj_tbl_Utovares.InsertOnSubmit(newitm)
             _linqObj.SubmitChanges()
@@ -171,6 +176,7 @@
                 itm.Telefonnummer = utovareDetails.Telefon
                 itm.Hemsida = utovareDetails.Weburl
                 itm.Bild = utovareDetails.Bild
+                itm.Ovrigt = utovareDetails.Beskrivning
             Next
 
             _linqObj.SubmitChanges()

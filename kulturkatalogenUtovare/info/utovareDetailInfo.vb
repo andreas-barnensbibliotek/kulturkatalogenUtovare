@@ -11,6 +11,7 @@
         _kommun = ""
         _weburl = ""
         _bild = ""
+        _beskrivning = ""
     End Sub
 
     Private _utivarid As Integer
@@ -124,5 +125,13 @@
             _bild = value
         End Set
     End Property
-
+    Private _beskrivning As String
+    Public Property Beskrivning() As String
+        Get
+            Return _beskrivning
+        End Get
+        Set(ByVal value As String)
+            _beskrivning = value
+        End Set
+    End Property
 End Class
