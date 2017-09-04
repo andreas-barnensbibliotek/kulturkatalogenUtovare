@@ -70,16 +70,22 @@ Partial Public Class utovareLinqDataContext
 		End Get
 	End Property
 	
+	<Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.kk_aj_proc_searchUtovareAll")>  _
+	Public Function kk_aj_proc_searchUtovareAll(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="NVarChar(500)")> ByVal search As String) As ISingleResult(Of kk_aj_proc_searchUtovareAllResult)
+		Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod,MethodInfo), search)
+		Return CType(result.ReturnValue,ISingleResult(Of kk_aj_proc_searchUtovareAllResult))
+	End Function
+	
 	<Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.kk_aj_proc_GetArrBy_Utovare")>  _
 	Public Function kk_aj_proc_GetArrBy_Utovare(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal utovarid As System.Nullable(Of Integer)) As ISingleResult(Of kk_aj_proc_GetArrBy_UtovareResult)
 		Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod,MethodInfo), utovarid)
 		Return CType(result.ReturnValue,ISingleResult(Of kk_aj_proc_GetArrBy_UtovareResult))
 	End Function
 	
-	<Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.kk_aj_proc_searchUtovareAll")>  _
-	Public Function kk_aj_proc_searchUtovareAll(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="NVarChar(500)")> ByVal search As String) As ISingleResult(Of kk_aj_proc_searchUtovareAllResult)
-		Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod,MethodInfo), search)
-		Return CType(result.ReturnValue,ISingleResult(Of kk_aj_proc_searchUtovareAllResult))
+	<Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.kk_aj_proc_FormUtovareSearch")>  _
+	Public Function kk_aj_proc_FormUtovareSearch(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="NVarChar(200)")> ByVal epost As String, <Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="NVarChar(10)")> ByVal postnr As String) As ISingleResult(Of kk_aj_proc_FormUtovareSearchResult)
+		Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod,MethodInfo), epost, postnr)
+		Return CType(result.ReturnValue,ISingleResult(Of kk_aj_proc_FormUtovareSearchResult))
 	End Function
 End Class
 
@@ -409,6 +415,196 @@ Partial Public Class kk_aj_tbl_Utovare
 	End Sub
 End Class
 
+Partial Public Class kk_aj_proc_searchUtovareAllResult
+	
+	Private _UtovarID As Integer
+	
+	Private _Organisation As String
+	
+	Private _Fornamn As String
+	
+	Private _Efternamn As String
+	
+	Private _Telefonnummer As String
+	
+	Private _Adress As String
+	
+	Private _Postnr As String
+	
+	Private _Ort As String
+	
+	Private _Epost As String
+	
+	Private _Kommun As String
+	
+	Private _Hemsida As String
+	
+	Private _Ovrigt As String
+	
+	Private _Bild As String
+	
+	Public Sub New()
+		MyBase.New
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_UtovarID", DbType:="Int NOT NULL")>  _
+	Public Property UtovarID() As Integer
+		Get
+			Return Me._UtovarID
+		End Get
+		Set
+			If ((Me._UtovarID = value)  _
+						= false) Then
+				Me._UtovarID = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Organisation", DbType:="NVarChar(150)")>  _
+	Public Property Organisation() As String
+		Get
+			Return Me._Organisation
+		End Get
+		Set
+			If (String.Equals(Me._Organisation, value) = false) Then
+				Me._Organisation = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Fornamn", DbType:="NVarChar(70)")>  _
+	Public Property Fornamn() As String
+		Get
+			Return Me._Fornamn
+		End Get
+		Set
+			If (String.Equals(Me._Fornamn, value) = false) Then
+				Me._Fornamn = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Efternamn", DbType:="NVarChar(70)")>  _
+	Public Property Efternamn() As String
+		Get
+			Return Me._Efternamn
+		End Get
+		Set
+			If (String.Equals(Me._Efternamn, value) = false) Then
+				Me._Efternamn = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Telefonnummer", DbType:="NVarChar(50)")>  _
+	Public Property Telefonnummer() As String
+		Get
+			Return Me._Telefonnummer
+		End Get
+		Set
+			If (String.Equals(Me._Telefonnummer, value) = false) Then
+				Me._Telefonnummer = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Adress", DbType:="NVarChar(70)")>  _
+	Public Property Adress() As String
+		Get
+			Return Me._Adress
+		End Get
+		Set
+			If (String.Equals(Me._Adress, value) = false) Then
+				Me._Adress = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Postnr", DbType:="NVarChar(10)")>  _
+	Public Property Postnr() As String
+		Get
+			Return Me._Postnr
+		End Get
+		Set
+			If (String.Equals(Me._Postnr, value) = false) Then
+				Me._Postnr = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Ort", DbType:="NVarChar(80)")>  _
+	Public Property Ort() As String
+		Get
+			Return Me._Ort
+		End Get
+		Set
+			If (String.Equals(Me._Ort, value) = false) Then
+				Me._Ort = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Epost", DbType:="NVarChar(150)")>  _
+	Public Property Epost() As String
+		Get
+			Return Me._Epost
+		End Get
+		Set
+			If (String.Equals(Me._Epost, value) = false) Then
+				Me._Epost = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Kommun", DbType:="NVarChar(80)")>  _
+	Public Property Kommun() As String
+		Get
+			Return Me._Kommun
+		End Get
+		Set
+			If (String.Equals(Me._Kommun, value) = false) Then
+				Me._Kommun = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Hemsida", DbType:="NVarChar(250)")>  _
+	Public Property Hemsida() As String
+		Get
+			Return Me._Hemsida
+		End Get
+		Set
+			If (String.Equals(Me._Hemsida, value) = false) Then
+				Me._Hemsida = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Ovrigt", DbType:="NVarChar(250)")>  _
+	Public Property Ovrigt() As String
+		Get
+			Return Me._Ovrigt
+		End Get
+		Set
+			If (String.Equals(Me._Ovrigt, value) = false) Then
+				Me._Ovrigt = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Bild", DbType:="NVarChar(250)")>  _
+	Public Property Bild() As String
+		Get
+			Return Me._Bild
+		End Get
+		Set
+			If (String.Equals(Me._Bild, value) = false) Then
+				Me._Bild = value
+			End If
+		End Set
+	End Property
+End Class
+
 Partial Public Class kk_aj_proc_GetArrBy_UtovareResult
 	
 	Private _ArrID As Integer
@@ -484,6 +680,8 @@ Partial Public Class kk_aj_proc_GetArrBy_UtovareResult
 	Private _ArrangemangStatusID As Integer
 	
 	Private _Version As System.Nullable(Of Integer)
+	
+	Private _arrgruppid As System.Nullable(Of Integer)
 	
 	Public Sub New()
 		MyBase.New
@@ -936,9 +1134,21 @@ Partial Public Class kk_aj_proc_GetArrBy_UtovareResult
 			End If
 		End Set
 	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_arrgruppid", DbType:="Int")>  _
+	Public Property arrgruppid() As System.Nullable(Of Integer)
+		Get
+			Return Me._arrgruppid
+		End Get
+		Set
+			If (Me._arrgruppid.Equals(value) = false) Then
+				Me._arrgruppid = value
+			End If
+		End Set
+	End Property
 End Class
 
-Partial Public Class kk_aj_proc_searchUtovareAllResult
+Partial Public Class kk_aj_proc_FormUtovareSearchResult
 	
 	Private _UtovarID As Integer
 	

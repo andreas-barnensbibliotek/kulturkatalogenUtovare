@@ -1,6 +1,6 @@
 ﻿Public Class utovareDAL
-    Private _connectionString As String = "Data Source=.\SQLEXPRESS;Initial Catalog=dnndev_v902.me;Persist Security Info=True;User ID=dnndev_v902.me;Password=L0rda1f"
-    'Private _connectionString As String = "Data Source=DE-1896;Initial Catalog=kulturkatalogenDB;User ID=kulturkatalogenDB;Password=L0rda1f"
+    'Private _connectionString As String = "Data Source=.\SQLEXPRESS;Initial Catalog=dnndev_v902.me;Persist Security Info=True;User ID=dnndev_v902.me;Password=L0rda1f"
+    Private _connectionString As String = "Data Source=DE-1896;Initial Catalog=kulturkatalogenDB;User ID=kulturkatalogenDB;Password=L0rda1f"
     Private _linqObj As New utovareLinqDataContext(_connectionString)
 
 
@@ -121,6 +121,34 @@
             Select e).Any Then
             ret = True
         End If
+
+        Return ret
+    End Function
+    Public Function getUtovareByFormSearch(epost As String, postnr As String) As List(Of utovareDetailInfo)
+        Dim ret As New List(Of utovareDetailInfo)
+
+        Dim usr = From e In _linqObj.kk_aj_proc_FormUtovareSearch(epost, postnr)
+                  Select e
+
+        For Each itm In usr
+            Dim tmp As New utovareDetailInfo
+            tmp.Adress = itm.Adress
+            tmp.Efternamn = itm.Efternamn
+            tmp.Epost = itm.Epost
+            tmp.Fornamn = itm.Fornamn
+            tmp.Kommun = itm.Kommun
+            tmp.Organisation = itm.Organisation
+            tmp.Ort = itm.Ort
+            tmp.Postnr = itm.Postnr
+            tmp.Telefon = itm.Telefonnummer
+            tmp.UtovarID = itm.UtovarID
+            tmp.Weburl = itm.Hemsida
+            tmp.Bild = itm.Bild
+            tmp.Beskrivning = itm.Ovrigt
+
+            ret.Add(tmp)
+        Next
+
 
         Return ret
     End Function

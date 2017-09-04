@@ -17,6 +17,24 @@
       <Column Name="Bild" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
     </Type>
   </Table>
+  <Function Name="dbo.kk_aj_proc_searchUtovareAll" Method="kk_aj_proc_searchUtovareAll">
+    <Parameter Name="search" Type="System.String" DbType="NVarChar(500)" />
+    <ElementType Name="kk_aj_proc_searchUtovareAllResult">
+      <Column Name="UtovarID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Organisation" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Fornamn" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+      <Column Name="Efternamn" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+      <Column Name="Telefonnummer" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Adress" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+      <Column Name="Postnr" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Ort" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="Epost" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Kommun" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="Hemsida" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Ovrigt" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Bild" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.kk_aj_proc_GetArrBy_Utovare" Method="kk_aj_proc_GetArrBy_Utovare">
     <Parameter Name="utovarid" Type="System.Int32" DbType="Int" />
     <ElementType Name="kk_aj_proc_GetArrBy_UtovareResult">
@@ -57,11 +75,13 @@
       <Column Name="ArrangemangStatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="ArrangemangStatusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Version" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="arrgruppid" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.kk_aj_proc_searchUtovareAll" Method="kk_aj_proc_searchUtovareAll">
-    <Parameter Name="search" Type="System.String" DbType="NVarChar(500)" />
-    <ElementType Name="kk_aj_proc_searchUtovareAllResult">
+  <Function Name="dbo.kk_aj_proc_FormUtovareSearch" Method="kk_aj_proc_FormUtovareSearch">
+    <Parameter Name="epost" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="postnr" Type="System.String" DbType="NVarChar(10)" />
+    <ElementType Name="kk_aj_proc_FormUtovareSearchResult">
       <Column Name="UtovarID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Organisation" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
       <Column Name="Fornamn" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />

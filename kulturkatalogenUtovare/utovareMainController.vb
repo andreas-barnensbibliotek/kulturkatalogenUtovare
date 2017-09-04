@@ -8,7 +8,9 @@
     Public Function getutovarebyautocomplete(namn As String) As List(Of utovareDetailInfo)
         Return _dalobj.getUsername(namn)
     End Function
-
+    Public Function getutovarebyFormSearch(epost As String, postnr As String) As List(Of utovareDetailInfo)
+        Return _dalobj.getUtovareByFormSearch(epost, postnr)
+    End Function
     Public Function getutovareDetail(utovarid As Integer) As utovareDetailInfo
         Return _dalobj.getutovareDetails(utovarid)
     End Function
