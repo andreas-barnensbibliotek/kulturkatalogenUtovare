@@ -1,10 +1,6 @@
 ﻿Public Class utovareDAL
-    'Private _connectionString As String = "Data Source=.\SQLEXPRESS;Initial Catalog=kulturkatalogenDB_v1;Persist Security Info=True;User ID=dnndev_v902.me;Password=L0rda1f"
-    Private _connectionString As String = "Data Source=DE-1896;Initial Catalog=kulturkatalogenDB_DEV;User ID=kulturkatalogenDB;Password=L0rda1f"
-    'Private _connectionString As String = "Data Source=.\SQLEXPRESS;Initial Catalog=dnndev_v902.me;Persist Security Info=True;User ID=dnndev_v902.me;Password=L0rda1f"
-    'Private _connectionString As String = "Data Source=DE-1896;Initial Catalog=kulturkatalogenDB;User ID=kulturkatalogenDB;Password=L0rda1f"
-    Private _linqObj As New utovareLinqDataContext(_connectionString)
-
+    Dim connstring As New connectionstringHandler
+    Private _linqObj As New utovareLinqDataContext(connstring.CurrentConnectionString)
 
     Public Function getUsername(name As String) As List(Of utovareDetailInfo)
         Dim ret As New List(Of utovareDetailInfo)
